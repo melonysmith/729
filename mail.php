@@ -3,10 +3,10 @@
 $EmailFrom = "smith.melonya@gmail.com";
 $EmailTo = "smith.melonya@gmail.com";
 $Subject = "729 Solutions Test";
-$fName = Trim(stripslashes($_POST['First Name'])); 
-$lName = Trim(stripslashes($_POST['Last Name'])); 
-$Email = Trim(stripslashes($_POST['Email'])); 
-$Message = Trim(stripslashes($_POST['Message'])); 
+$fName = Trim(stripslashes($_POST['fName'])); 
+$lName = Trim(stripslashes($_POST['lName'])); 
+$email = Trim(stripslashes($_POST['email'])); 
+$message = Trim(stripslashes($_POST['message'])); 
 
 // validation
 $validationOK=true;
@@ -24,10 +24,10 @@ $Body .= "Last Name: ";
 $Body .= $lName;
 $Body .= "\n";
 $Body .= "Email: ";
-$Body .= $Email;
+$Body .= $email;
 $Body .= "\n";
 $Body .= "Message: ";
-$Body .= $Message;
+$Body .= $message;
 $Body .= "\n";
 
 // send email 
