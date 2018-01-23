@@ -22,6 +22,8 @@
     <script src="https://use.fontawesome.com/c98018c60c.js"></script>
     <!-- validate.js -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.12.0/validate.min.js"></script>
+    <!-- validate code -->
+    <acript src="js/validate.js"></acript>
 </head>
 
 <body>
@@ -61,21 +63,39 @@
             <div class="col-sm-6">
                 <div id="page-wrap">
                     <div id="contact-area">
+                        <form id="myform" action="mail.php" method="get">
+                            <fieldset>
 
-                        <form method="post" action="mail.php" id="myForm">
-                            <label for="fName">First Name:</label>
-                            <input type="text" name="fName" id="fName" required/>
-                            <label for="lName">Last Name:</label>
-                            <input type="text" name="lName" id="lName" required/>
-                            <br /><br />
-                            <label for="Email">Email:</label>
-                            <input type="text" name="Email" id="Email" required/>
-                            <br /><br />
-                            <label for="Message">Message:</label><br />
-                            <textarea name="Message" rows="6" cols="60" id="Message" required minlength="10" maxlength="50"></textarea>
-                            <br /><br />
-                            <input type="submit" name="submit" value="Submit" class="submit-button" />
+                                <p>
+                                    <label for="authorFirst">First Name <abbr title="Required">*</abbr></label>
+                                    <input name="authorFirst" id="authorFirst" value="" required="required" aria-required="true" pattern="[A-Za-z]" title="Your first name (no special characters)" type="text" spellcheck="false" size="20" />
+                                </p>
+
+                                <p>
+                                    <label for="authorLast">Last Name <abbr title="Required">*</abbr></label>
+                                    <input name="authorLast" id="authorLast" value="" required="required" aria-required="true" pattern="[A-Za-z]" title="Your last name (no special characters)" type="text" spellcheck="false" size="20" />
+                                </p>
+
+                                <p>
+                                    <label for="email">Email <abbr title="Required">*</abbr></label>
+                                    <input name="email" id="email" value="" required="required" aria-required="true" pattern="^(([-\w\d]+)(\.[-\w\d]+)*@([-\w\d]+)(\.[-\w\d]+)*(\.([a-zA-Z]{2,5}|[\d]{1,3})){1,2})$" title="Your email address" type="email" spellcheck="false" size="30" />
+                                </p>
+
+                                <p>
+                                    <label for="text">Comment <abbr title="Required">*</abbr></label>
+                                    <textarea name="text" id="text" required="required" aria-required="true" title="Your comment" spellcheck="true" cols="40" rows="10"></textarea>
+
+                                </p>
+
+                            </fieldset>
+                            <fieldset>
+
+                                <button name="save" type="submit">Submit</button>
+
+                            </fieldset>
+
                         </form>
+
                     </div>
                 </div>
             </div>
@@ -93,37 +113,7 @@
         </p>
     </footer>
 
-    <script>
-        var validator = new FormValidator('myForm', [{
-            name: 'req',
-            display: 'required',
-            rules: 'required'
-        }, {
-            name: 'alpha',
-            rules: 'alpha'
-        }, {
-            name: 'password',
-            rules: 'required'
-        }, {
-            name: 'password_confirm',
-            display: 'password confirmation',
-            rules: 'required|matches[password]'
-        }, {
-            name: 'email',
-            rules: 'valid_email',
-            depends: function() {
-                return Math.random() > .5;
-            }
-        }, {
-            name: 'minlength',
-            display: 'min length',
-            rules: 'min_length[10]'
-        }], function(errors, event) {
-            if (errors.length > 0) {
-                // Show the errors
-            }
-        });
-    </script>
+
 </body>
 
 </html>
