@@ -11,7 +11,6 @@ $message = Trim(stripslashes($_POST['message']));
 // validation
 $validationOK=true;
 if (!$validationOK) {
-  print "<meta http-equiv=\"refresh\" content=\"0;URL=error.html\">";
   exit;
 }
 
@@ -37,7 +36,5 @@ $success = mail($EmailTo, $Subject, $Body, "From: <$EmailFrom>");
 if ($success){
   print "<meta http-equiv=\"refresh\" content=\"0;URL=contactthanks.php\">";
 }
-else{
-  print "<meta http-equiv=\"refresh\" content=\"0;URL=error.html\">";
-}
+
 ?>
