@@ -202,6 +202,21 @@ label {
     font-size: 1.4em;
 }
 
+#contact-area textarea:required,
+#contact-area input:required {
+    border: 2px solid darkslategray;
+}
+
+#contact-area textarea:invalid,
+#contact-area input:invalid {
+    border: 2px solid salmon;
+}
+
+#contact-area textarea:valid,
+#contact-area input:valid {
+    border: 2px solid palegreen;
+}
+
 
 /* google map */
 
