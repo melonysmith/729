@@ -11,8 +11,7 @@ html {
 /* navbar */
 
 .navbar {
-    overflow: hidden;
-    position: fixed;
+    position: relative;
     top: 0;
     width: 100%;
     border: none;
@@ -64,8 +63,8 @@ html {
 /* cover photo */
 
 .cover-image {
-    margin-top: 3.75em;
-    background-image: url("http://heartandsoulimages.com/msportfolio/misc/729/img/cover.jpg");
+    margin: 0 auto;
+    background-image: url("../img/cover.jpg");
     height: 50%;
     background-position: center;
     background-repeat: no-repeat;
@@ -151,7 +150,7 @@ html {
 }
 
 
-/* form */
+/* contact page, form */
 
 #page-wrap {
     font-size: 65%;
@@ -218,7 +217,7 @@ label {
 }
 
 
-/* google map */
+/* contact page, google map */
 
 .gMap {
     margin-top: 25px;
@@ -271,7 +270,7 @@ footer a:hover {
 }
 
 
-/* will center "bullets info:" on smaller devices */
+/* center About page heading ("bullets info:") on smaller devices */
 
 @media only screen and (max-width: 1024px) {
     h2 {
