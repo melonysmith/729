@@ -152,6 +152,9 @@ html {
 
 /* contact page, form */
 
+
+/* html5 validation */
+
 #page-wrap {
     font-size: 65%;
     width: 600px;
@@ -213,6 +216,45 @@ label {
 
 #contact-area textarea:valid,
 #contact-area input:valid {
+    border: 2px solid palegreen;
+}
+
+
+/* javascript validation */
+
+#success_message {
+    display: none;
+}
+
+.form-group #form_name:invalid {
+    border: 2px solid salmon;
+}
+
+.form-group #form_lastname:invalid {
+    border: 2px solid salmon;
+}
+
+.form-group #form_email:invalid {
+    border: 2px solid salmon;
+}
+
+.form-group #form_message:invalid {
+    border: 2px solid salmon;
+}
+
+.form-group #form_name:valid {
+    border: 2px solid palegreen;
+}
+
+.form-group #form_lastname:valid {
+    border: 2px solid palegreen;
+}
+
+.form-group #form_email:valid {
+    border: 2px solid palegreen;
+}
+
+.form-group #form_message:valid {
     border: 2px solid palegreen;
 }
 

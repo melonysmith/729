@@ -16,10 +16,6 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <!-- Font Awesome -->
     <script src="https://use.fontawesome.com/c98018c60c.js"></script>
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- Bootstrap: Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -64,11 +60,11 @@
                 <div id="page-wrap">
                     <div id="contact-area">
                         <!-- form -->
-                        <form action="mail.php" method="post" class="contact-form">
+                        <form action="php/mail.php" method="post" class="contact-form">
                             <fieldset>
                                 <p>
                                     <label for="fName">First Name <abbr title="Required">*</abbr></label>
-                                    <input name="fName" id="fName" value="" required="required" aria-required="true" pattern="[a-zA-Z]+" title="\f0a9 Enter your first name (no special characters)" type="text" spellcheck="false" size="20" />
+                                    <input name="fName" id="fName" value="" required="required" aria-required="true" pattern="[a-zA-Z]+" title="Enter your first name (no special characters)" type="text" spellcheck="false" size="20" />
                                 </p>
                                 <p>
                                     <label for="lName">Last Name <abbr title="Required">*</abbr></label>
@@ -108,15 +104,6 @@
         </p>
     </footer>
 
-    <script>
-        $('input[required]').on('invalid', function(e) {
-            alert("Error! Please complete the required fields to continue.");
-        });
-
-        $('textarea[required]').on('invalid', function(e) {
-            alert("Error! Please add a comment before submitting.");
-        });
-    </script>
 </body>
 
 </html>
